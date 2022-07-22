@@ -1,0 +1,39 @@
+.play-container{
+    background-color: #A4BBD6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+
+.bars{
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 7rem;
+    margin-bottom: 3rem;
+}
+.bar{
+    height: 9px;
+    width: 280px;
+    background-color: #FAF1AC;
+    border: 1px solid black;
+}
+
+.filled-bar{
+    background-color: #FFA800;
+}
+
+.lhaj{
+    height: 250px;
+    width: 130px;
+}
+h1{
+    font-size: 4rem;
+    color: #FAF1AC;
+    margin-bottom: 1rem;
+}
+
+.play{
+    height: 6rem;
+    width: 250px;
+}
