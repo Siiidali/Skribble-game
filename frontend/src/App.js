@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Routes>
           <Route path='/step1' element={<div><NavBar/><NickName/></div>}/>
-          <Route path='/step2' element={<div><NavBar/><Home/></div>}/>
+          <Route path='/step2/:name' element={<div><NavBar/><Home/></div>}/>
           <Route path='/step3' element={<div><NavBar/><Play/></div>}/>
           <Route path='/step4' element={<div><NavBar/><Board/></div>}/>
       </Routes>
