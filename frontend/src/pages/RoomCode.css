@@ -30,3 +30,18 @@ h1{
 .arrow div {
     visibility: hidden;
 }
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-nickname{
+  background-color: #FAF1AC;
+  width: 25vw;
+  height: 10vh;
+  border: 5px solid #FFC700; 
+  outline: 2px solid black;
+  padding: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
