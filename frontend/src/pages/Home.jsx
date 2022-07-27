@@ -6,7 +6,7 @@ import { usePlayerContext } from '../hooks/usePlayerContext';
 import CreatRoom from './CreatRoom';
 import RoomCode from './RoomCode'
 import './Home.css'
-function Home() {
+function Home({socket}) {
     const [main,setMain] = useState(boy);
     const [right,setRight] = useState(girl);
     const [left,setLeft] = useState(rock);
@@ -72,8 +72,8 @@ function Home() {
             </div>
                             
             </div>}
-            {step === 2 && <CreatRoom />}
-            {step === 3 && <RoomCode />}
+            {step === 2 && <CreatRoom socket={socket} />}
+            {step === 3 && <RoomCode socket={socket}/>}
         </div>
      );
 }

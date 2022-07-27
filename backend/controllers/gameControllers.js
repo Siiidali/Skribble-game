@@ -23,8 +23,7 @@ const createGame = async(req,res)=>{
  }
 
 const joinGame = async(req,res)=>{
-    const code = req.params.room
-    const {name} = req.body 
+    const {name,code} = req.body 
     try {
         const oldGame = await Game.find({code});
        oldGame[0].players.push(name);
@@ -48,7 +47,7 @@ const joinGame = async(req,res)=>{
 const getGame = async(req,res)=>{
     const code = req.params.room
     try {
-        const game = await Game.find({code});
+        const game = await Game.findOne({code});
         if(game){
             res.status(200).json({
                 game,

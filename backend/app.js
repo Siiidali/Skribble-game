@@ -5,20 +5,20 @@ const { Server } = require("socket.io");
 const cors = require('cors');
 require("dotenv").config();
 const gameRoutes = require('./routes/gameRoutes');
+const socket = require('socket.io');
+const socketConnection = require('./socket/socketConnection');
 
 
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server,{
+const io =  socket(server,{
     cors: {
-        origin: "http://localhost:3000"
+        origin: "http://localhost:4000"
     }
 });
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
-  });
+
 app.use(cors({ origin: true, credentials: true }));
 const dbURL = process.env.URLDB;
 mongoose.connect(dbURL,{ useNewUrlParser: true , useUnifiedTopology:true}).then((result)=>{
@@ -31,5 +31,13 @@ mongoose.connect(dbURL,{ useNewUrlParser: true , useUnifiedTopology:true}).then(
 }).catch((error)=>{
     console.log(error);
 });
+
+io.on('connection', socketConnection);
+
+// app.use(
+//     cors({
+//         origin: "http://localhost:3000",
+//     })
+// )
 app.use(express.json());
 app.use('/api/game',gameRoutes);

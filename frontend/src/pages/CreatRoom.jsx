@@ -7,11 +7,12 @@ import {useNavigate} from 'react-router-dom';
 
 
 
-function CreatRoom() {
+function CreatRoom({socket}) {
     const navigate = useNavigate();
 
-    const [code,setCode] = useState('');
-    const {name,rounds} = usePlayerContext();
+   
+    const {name,rounds,code,setCode} = usePlayerContext();
+    const room = code ; 
 
     const changeHandler = (e)=>{
         setCode(e.target.value);
@@ -19,12 +20,25 @@ function CreatRoom() {
 
     const submitHandler = async(e)=>{
         e.preventDefault();
-        const responce = await axios.post(`http://localhost/api/game/create`,{
-                code,name,rounds
+        try {
+            const game = { code,name,rounds};
+            const responce = await fetch('http://localhost:4000/api/game/create',{
+                method: 'POST',
+                body: JSON.stringify(game),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+               
             }) 
-        if(responce.success){
-            navigate('/step3');
+            if(responce.ok){
+                navigate('/step3')
+                
+            }
+        } catch (error) {
+            console.log(error.message)
         }
+        
+       
     }
 
     return ( 

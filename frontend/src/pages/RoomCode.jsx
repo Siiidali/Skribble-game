@@ -3,16 +3,35 @@ import './RoomCode.css'
 import back from '../assets/back.svg'
 import {usePlayerContext} from '../hooks/usePlayerContext';
 import { useState } from 'react';
-function CreatRoom() {
-    const [code,setCode] = useState('')
-    
+import {useNavigate} from 'react-router-dom';
+function CreatRoom({socket}) {
+    const navigate = useNavigate()
+    const {code,setCode,name} = usePlayerContext();
+    const room = code ; 
 
     const changeHandler = (e)=>{
         setCode(e.target.value);
     }
 
-    const submitHandler = (e)=>{
-        console.log(e);
+    const submitHandler = async(e)=>{
+        e.preventDefault();
+        try {
+            const game = {code,name};
+            const responce = await fetch('http://localhost:4000/api/game/join',{
+                method: 'POST',
+                body: JSON.stringify(game),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+               
+            }) 
+            if(responce.ok){
+                
+                navigate('/step3')
+            }
+        } catch (error) {
+            console.log(error.message)
+        }
     }
 
     return ( 
