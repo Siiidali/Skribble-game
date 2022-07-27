@@ -6,7 +6,7 @@ const createGame = async(req,res)=>{
         const game = await Game.create({
             code,
             rounds,
-            players:[name]
+            players:[{name,score:0}]
         })
         if(game){
             res.status(200).json({
@@ -26,11 +26,12 @@ const joinGame = async(req,res)=>{
     const {name,code} = req.body 
     try {
         const oldGame = await Game.find({code});
-       oldGame[0].players.push(name);
+       oldGame[0].players.push({name,score : 0});
        const players = oldGame[0].players;
         const game = await Game.findOneAndUpdate({code},
             {
                 players : players
+                
             }
             ).exec();
         if(game){

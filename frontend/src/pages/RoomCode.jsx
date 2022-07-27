@@ -27,7 +27,7 @@ function CreatRoom({socket}) {
             }) 
             if(responce.ok){
                 
-                navigate('/step3')
+                navigate('/play')
             }
         } catch (error) {
             console.log(error.message)

@@ -21,12 +21,12 @@ function App() {
   return (
     <Router>
       <Routes>
-          <Route path='/step1' element={<div><NavBar/><NickName/></div>}/>
-          <Route path='/step2' element={<div><NavBar/><Home socket={socket}/></div>}/>
-          <Route path='/step3' element={<div><NavBar/><Play socket={socket}/></div>}/>
+          <Route path='/' element={<div><NavBar/><NickName/></div>}/>
+          <Route path='/home' element={<div><NavBar/><Home socket={socket}/></div>}/>
+          <Route path='/play' element={<div><NavBar/><Play socket={socket}/></div>}/>
           <Route path='/step4' element={<div><NavBar/><Board/></div>}/>
           <Route path='/chat' element={<div><NavBar/><Chat/></div>}/>
-          <Route path='/game/:room' element={<div><NavBar/><Players socket={socket}/></div>}/>
+          <Route path='/game/:room' element={<div><NavBar/><Game socket={socket}/></div>}/>
 
       </Routes>
     </Router>

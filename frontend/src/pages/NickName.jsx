@@ -14,7 +14,7 @@ const {name,setName} = usePlayerContext();
 
     const submitHandler = (e)=>{
         e.preventDefault();
-        navigate(`/step2`)
+        navigate(`/home`)
     }
 
     return ( 

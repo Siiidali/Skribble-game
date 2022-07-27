@@ -18,8 +18,8 @@ module.exports = socketConnection = function(socket){
         socket.to(room).emit('update player' , score , name )
     })
 
-    socket.on('message' , (room , message , name)=>{
-        socket.to(room).emit('message' , message , name );
+    socket.on('message' , (code , newMessage , name)=>{
+        socket.to(code).emit('message' , newMessage , name );
     })
 
 }

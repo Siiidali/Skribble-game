@@ -1,0 +1,23 @@
+.players-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #C4C4C4;
+    border: 2px solid black;
+}
+.player{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.player img{
+    height: 150px;
+    width: 60px;
+}
+.name{
+    font-size: 1.7rem;
+}
+
+.score{
+    font-size: 1.5rem;
+    color: #E61A10;
+}
