@@ -31,7 +31,6 @@ const joinGame = async(req,res)=>{
         const game = await Game.findOneAndUpdate({code},
             {
                 players : players
-                
             }
             ).exec();
         if(game){

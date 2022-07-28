@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useGameContext} from '../hooks/useGameContext';
 import {usePlayerContext} from '../hooks/usePlayerContext';
+import './Chat.css'
 
 
 function Chat({socket}) {
@@ -9,7 +10,7 @@ function Chat({socket}) {
     const {code,name} = usePlayerContext();
 
     socket.on('message',(message,name)=>{
-        setMessages([...messages,{name,message}]);
+        setMessages([{name,message},...messages]);
     })
 
     const changeHandler = (e)=>{
@@ -19,7 +20,7 @@ function Chat({socket}) {
     const submitHandler = (e)=>{
         e.preventDefault();
         socket.emit('message' , code , newMessage, name)
-        setMessages([...messages,{name:`${name} (YOU)`,message : newMessage}]);
+        setMessages([{name:`${name} (YOU)`,message : newMessage},...messages]);
         console.log(messages);
     }
 
@@ -36,8 +37,8 @@ function Chat({socket}) {
                     );
                 })}
            </div>
-           <form onSubmit={submitHandler}>
-                <input type="text" onChange={changeHandler} value={newMessage}/>
+           <form className='input-container' onSubmit={submitHandler}>
+                <input className='message-input' type="text" onChange={changeHandler} value={newMessage}  placeholder="type your guess here..." maxLength={15}/>
            </form>
         </div>
      );

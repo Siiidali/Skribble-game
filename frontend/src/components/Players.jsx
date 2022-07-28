@@ -3,15 +3,15 @@ import { useGameContext } from "../hooks/useGameContext";
 import logo from '../assets/Boy.svg'
 import './Players.css'
 function Players({socket}) {
-    const {players,setPlayers} = useGameContext();
-    const [newList,setNewList] = useState([...players]);
+
+    const {statePlayers,dispatch} = useGameContext();
     socket.on('player-joined' , (score,name)=>{
-       setPlayers([...players,{name,score}]);
+        dispatch({type: 'ADD_PLAYER', payload: {name,score}}) 
     })
     let i = 0;
     return ( 
         <div className="players-container">
-           {players.map(player=>{
+           {statePlayers.map(player=>{
             return(
                 
                     <div key={i++} className="player" >

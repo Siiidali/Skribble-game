@@ -12,15 +12,16 @@ function Play({socket}) {
 
     const {code,name} = usePlayerContext();
     const room = code ;
-    const {players , setPlayers} = useGameContext();
+    const {statePlayers,dispatch} = useGameContext();
 
     const clickHandler = async(e)=>{
         try {
             const responce = await fetch(`http://localhost:4000/api/game/${code}`);
             if(responce.ok){
                 const data = await responce.json();
-                setPlayers(data.game.players);
+                dispatch({type: 'SET_PLAYERS', payload: data.game.players})
                 console.log(data.game.players);
+                console.log(statePlayers);
                 socket.emit('create room' , room );
                 socket.emit('player joined' , room , name)
                 navigate(`/game/${code}`,{replace:true});

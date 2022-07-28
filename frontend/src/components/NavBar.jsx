@@ -8,12 +8,12 @@ function NavBar() {
     return ( 
         <div className='navbar'>
             <div className='elements'>
-            <div className='logo'>
-                <img src={logo} alt="skribbl" />
-            </div>
-            <div className='settings'>
-                <img src={settings} alt="settings" onClick={handleClick} />
-            </div>
+                <div className='logo'>
+                    <img src={logo} alt="skribbl" />
+                </div>
+                <div className='settings'>
+                    <img src={settings} alt="settings" onClick={handleClick} />
+                </div>
             </div>
         </div>
      );

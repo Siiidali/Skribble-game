@@ -1,0 +1,68 @@
+.chat-container{
+    margin: 0.5rem 0 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #C4C4C4;
+    border: 2px solid black;
+    width: 20vw;
+    justify-content: space-between;
+    
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.message{
+    background: #b2ddd8;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    width: 100%;
+}
+
+.message h3{
+    color: #ff0000;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.message p{
+
+}
+
+.input-container{
+    background: none;
+    background-color: white;
+    /* background-image: url(../assets/sendButton.svg); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5vh;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.message-input{
+    background: none;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

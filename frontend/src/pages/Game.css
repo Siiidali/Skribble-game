@@ -1,4 +1,77 @@
+body{
+    background-color: #A4BBD6;
+}
 .game-container{
+   display: flex;
+   flex-direction: column;
+   margin: 1rem 2rem;
+  
+}
+
+.nav-bar{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    height: 7vh;
+}
+
+.player-score{
+    display: flex;
+    align-items: center;
+    width: 69%;
+    text-align: start;
+    padding: 0 10px;
+    border-right: 3px solid black;
+    height: 100%;
+    background-color: #C4C4C4;
+}
+
+.player-score h1{
+    font-size: 3rem;
+   color: black;
+   margin-bottom: 0;
+   margin: 5px 0;
+}
+.player-score h1 span {
+    color: #E61A10;
+}
+
+.rounds-container{
+    font-size: 1.3rem;
+    border-right: 3px solid black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem ;
+    background-color: white;
+}
+.timer{
+    font-size: 1.3rem;
+    border-right: 3px solid black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 0.6rem;
+    background-color: #C4C4C4;
+    height: 100%;
+   
+}
+.home img{
+    height: 30px;
+    width: 30px;
+}
+
+.the-game{
+    display: flex;
 }

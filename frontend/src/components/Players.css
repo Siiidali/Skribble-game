@@ -3,6 +3,11 @@
     flex-direction: column;
     background-color: #C4C4C4;
     border: 2px solid black;
+    margin: 0.5rem 1.5rem 0.5rem 0;
+    width: 20vw;
+    height: 65vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
 }
 .player{
     display: flex;
@@ -20,4 +25,8 @@
 .score{
     font-size: 1.5rem;
     color: #E61A10;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
