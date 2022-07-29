@@ -12,7 +12,7 @@ function Play({socket}) {
 
     const {code,name} = usePlayerContext();
     const room = code ;
-    const {statePlayers,dispatch} = useGameContext();
+    const {statePlayers,dispatch,rounds,setRounds,currentRound,setCurrentRound} = useGameContext();
 
     const clickHandler = async(e)=>{
         try {
@@ -20,6 +20,8 @@ function Play({socket}) {
             if(responce.ok){
                 const data = await responce.json();
                 dispatch({type: 'SET_PLAYERS', payload: data.game.players})
+                setRounds(data.game.rounds)
+                setCurrentRound(data.game.currentRound);
                 console.log(data.game.players);
                 console.log(statePlayers);
                 socket.emit('create room' , room );

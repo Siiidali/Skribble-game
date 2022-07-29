@@ -26,9 +26,19 @@ export const GameContextProvider = ({children})=>{
     
     const [messages,setMessages] = useState([]);
     const [statePlayers,dispatch] = useReducer(playersReducer,[])
+    const [rounds,setRounds] = useState(null);
+    const [currentRound,setCurrentRound] = useState(null);
+    const [word,setWord] = useState('rocket');
 
     return (
-    <GameContext.Provider value={{statePlayers,dispatch,messages,setMessages}}>
+    <GameContext.Provider value={
+        {
+            statePlayers,dispatch,
+            messages,setMessages,
+            rounds,setRounds,
+            currentRound,setCurrentRound,
+            word,setWord
+        }}>
         {children}
     </GameContext.Provider>
     );

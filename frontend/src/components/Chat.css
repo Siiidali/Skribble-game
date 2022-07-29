@@ -4,7 +4,7 @@
     flex-direction: column;
     background-color: #C4C4C4;
     border: 2px solid black;
-    width: 20vw;
+    width: 35vw;
     justify-content: space-between;
     
 }
@@ -33,9 +33,7 @@
     line-height: 1.5rem;
 }
 
-.message p{
 
-}
 
 .input-container{
     background: none;
@@ -48,7 +46,7 @@
     width: 100%;
     border: none;
     outline: none;
-    cursor: pointer;
+    
     
 }
 
@@ -59,7 +57,7 @@
     outline: none;
     margin-left: 0.5rem;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     
 }
 

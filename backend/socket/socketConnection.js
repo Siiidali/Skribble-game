@@ -22,4 +22,9 @@ module.exports = socketConnection = function(socket){
         socket.to(code).emit('message' , newMessage , name );
     })
 
+    socket.on('update-score',(code,newScore,name)=>{
+        socket.to(code).emit('update-score',newScore,name);
+        console.log('updated score');
+    })
+
 }
