@@ -6,22 +6,7 @@
     height: 90vh;
 }
 
-.bars{
-    margin-top: 3.5rem;
-    display: flex;
-    gap: 7rem;
-    margin-bottom: 3rem;
-}
-.bar{
-    height: 9px;
-    width: 280px;
-    background-color: #FAF1AC;
-    border: 1px solid black;
-}
 
-.filled-bar{
-    background-color: #FFA800;
-}
 
 .lhaj{
     height: 250px;
@@ -36,4 +21,23 @@ h1{
 .play{
     height: 6rem;
     width: 250px;
+}
+.error h3{
+    margin-top: 1rem;
+    color: red;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+
+@media screen and (max-width: 799px) {
+    .lhaj{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 200px;
+    width: 130px;
+    }
+    .play{
+        height: 5rem;       
+    }
 }

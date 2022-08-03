@@ -4,42 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
-}
-
-.bars{
-    margin-top: 3.5rem;
-    display: flex;
-    gap: 7rem;
+    gap: 10vh;
     
 }
-.bar{
-    height: 9px;
-    width: 280px;
-    background-color: #FAF1AC;
-    border: 1px solid black;
-}
 
-.filled-bar{
-    background-color: #FFA800;
-}
 
 .nickname-container img{
     height: 10vh;
-    width: 50vw;
+    width: 70vw;
 }
 form{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.input-nickname{
-  background-color: #FAF1AC;
-  width: 25vw;
-  height: 10vh;
-  border: 5px solid #FFC700; 
-  outline: 2px solid black;
-  padding: 0.5rem;
-  font-size: 3rem;
-  text-align: center;
 }

@@ -6,23 +6,6 @@
     height: 90vh;
 }
 
-.bars{
-    margin-top: 3.5rem;
-    display: flex;
-    gap: 7rem;
-    margin-bottom: 3rem;
-}
-.bar{
-    height: 9px;
-    width: 280px;
-    background-color: #FAF1AC;
-    border: 1px solid black;
-}
-
-.filled-bar{
-    background-color: #FFA800;
-}
-
 .skins{
     display: flex;
     gap: 5rem;
@@ -45,7 +28,7 @@ h2{
     display: flex;
     gap: 1rem ;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .btn{
@@ -83,4 +66,29 @@ h2{
     font-size: 1.7rem;
     text-align: center;
     color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 799px) {
+    .skins{
+        gap: 2rem;
+    }
+    .skin{
+        height: 120px;
+        width: 70px;
+    }
+    .main{
+        height: 150px;
+        width: 100px;
+    }
+    .btns{
+        flex-direction: column;
+    }
+    .btn{
+    width: 250px;
+    height: 60px;
+    font-size: 2rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
 }

@@ -4,9 +4,9 @@
     flex-direction: column;
     background-color: #C4C4C4;
     border: 2px solid black;
-    width: 35vw;
+    width: 30%;
     justify-content: space-between;
-    
+    height: 100%;
 }
 .messages{
     display: flex;

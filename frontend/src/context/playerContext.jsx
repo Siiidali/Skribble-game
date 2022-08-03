@@ -8,8 +8,17 @@ export const PlayerContextProvider = ({children})=>{
     const [rounds,setRounds] = useState(2);
     const [code,setCode] = useState('');
     const [score,setScore] = useState(0);
+    const [isDrawing, setIsDrawing] = useState(false);
+    const [playerIndex,setPlayerIndex] = useState(null);
     return (
-    <PlayerContext.Provider value={{name,setName,rounds,setRounds,code,setCode,score,setScore}}>
+    <PlayerContext.Provider value={{
+        name,setName,
+        rounds,setRounds,
+        code,setCode,
+        score,setScore,
+        isDrawing,setIsDrawing,
+        playerIndex,setPlayerIndex
+        }}>
         {children}
     </PlayerContext.Provider>
     );

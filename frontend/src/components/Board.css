@@ -1,5 +1,5 @@
-.container-board{
-    height: 100%;
-    width: 100%;
-    background-color: aqua;
+.canva-container{
+    height: 65.4vh; 
+    margin-top: 0.5rem;
+    border: 2px solid black;
 }

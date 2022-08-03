@@ -4,8 +4,9 @@ body{
 .game-container{
    display: flex;
    flex-direction: column;
-   margin: 1rem 2rem;
-  
+ margin: 1rem 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .nav-bar{
@@ -13,12 +14,13 @@ body{
     align-items: center;
     border: 3px solid black;
     height: 7vh;
+    justify-content: space-between;
 }
 
 .player-score{
     display: flex;
     align-items: center;
-    width: 69%;
+    width: 75%;
     text-align: start;
     padding: 0 10px;
     border-right: 3px solid black;
@@ -43,22 +45,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 2rem ;
+    width: 15%;
     background-color: white;
     text-align: center;
 }
 .timer{
     font-size: 1.3rem;
-    border-right: 3px solid black;
     height: 100%;
     display: flex;
+    width: 15%;
     align-items: center;
     justify-content: center;
-    padding: 0 2rem;
     background-color: white;
     text-align: center;
 }
-
+.timer h3{
+    height: 100%;
+    width: 100%;
+}
 .home{
     display: flex;
     justify-content: center;
@@ -67,6 +71,7 @@ body{
     padding: 0 0.6rem;
     background-color: #C4C4C4;
     height: 100%;
+    border-left: 3px solid black;
    
 }
 .home img{
@@ -76,4 +81,19 @@ body{
 
 .the-game{
     display: flex;
+   
+}
+.second-nav-bar{
+    max-width: 1500px;
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    border: 2px solid black;
+    margin-top: 0.2rem;
+    padding: 8px 0;
+    background-color: #C4C4C4;
+}
+.second-nav-bar img{
+    height: 30px;
+    width: 30px;
 }

@@ -1,46 +1,40 @@
+@import url('http://fonts.cdnfonts.com/css/upheaval');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Upheaval TT (BRK)";
 }
-
-
-.App {
+.input-nickname{
+  background-color: #FAF1AC;
+  width: 25vw;
+  height: 10vh;
+  border: 5px solid #FFC700; 
+  outline: 2px solid black;
+  padding: 0.5rem;
+  font-size: 3rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bars{
+  margin-top: 3.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10vw;
+  margin-bottom: 3rem;
+}
+.bar{
+  height: 9px;
+  width: 20vw;
+  background-color: #FAF1AC;
+  border: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.filled-bar{
+  background-color: #FFA800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 799px) {
+  .input-nickname{
+    width: 70vw;
+    font-size: 2rem;
   }
 }

@@ -6,7 +6,10 @@ import { usePlayerContext } from '../hooks/usePlayerContext';
 import CreatRoom from './CreatRoom';
 import RoomCode from './RoomCode'
 import './Home.css'
+
+
 function Home({socket}) {
+
     const [main,setMain] = useState(boy);
     const [right,setRight] = useState(girl);
     const [left,setLeft] = useState(rock);

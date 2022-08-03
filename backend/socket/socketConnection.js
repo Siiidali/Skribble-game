@@ -27,4 +27,19 @@ module.exports = socketConnection = function(socket){
         console.log('updated score');
     })
 
+    socket.on('draw', (oldX, oldY, x, y, room) => {
+        socket.to(room).emit('draw', oldX, oldY, x, y);
+    });
+
+    socket.on('reset', (room) => {
+        socket.to(room).emit('reset');
+    });
+
+    socket.on('timer', (timer, room) => {
+        if (timer >= 0) socket.to(room).emit('timer', timer);
+    });
+
+    socket.on('next-player', (room,index) => {
+        socket.to(room).emit('next-player',index);
+    });
 }

@@ -8,10 +8,10 @@ import { GameContextProvider } from './context/gameContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-  <GameContextProvider>
+      <GameContextProvider>
         <PlayerContextProvider>
-          <App />
-    </PlayerContextProvider>
+              <App />
+        </PlayerContextProvider>
       </GameContextProvider>
   
 );

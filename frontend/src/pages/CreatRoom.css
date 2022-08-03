@@ -19,6 +19,7 @@
 h1{
     font-size: 6rem;
     color: #FAF1AC;
+    text-align: center;
 }
 
 .arrow{
@@ -35,13 +36,15 @@ form{
     justify-content: center;
     align-items: center;
 }
-.input-nickname{
-  background-color: #FAF1AC;
-  width: 25vw;
-  height: 10vh;
-  border: 5px solid #FFC700; 
-  outline: 2px solid black;
-  padding: 0.5rem;
-  font-size: 3rem;
-  text-align: center;
+
+.error h3{
+    margin-top: 1rem;
+    color: red;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+@media screen and (max-width: 799px) {
+    .things h1{
+        font-size: 3rem;
+    }
 }

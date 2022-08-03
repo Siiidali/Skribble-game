@@ -29,6 +29,9 @@ export const GameContextProvider = ({children})=>{
     const [rounds,setRounds] = useState(null);
     const [currentRound,setCurrentRound] = useState(null);
     const [word,setWord] = useState('rocket');
+    const [reset, setReset] = useState(false);
+    const [timer,setTimer] = useState(20);
+    const [drawingIndex,setDrawingIndex] = useState(0);
 
     return (
     <GameContext.Provider value={
@@ -37,7 +40,10 @@ export const GameContextProvider = ({children})=>{
             messages,setMessages,
             rounds,setRounds,
             currentRound,setCurrentRound,
-            word,setWord
+            word,setWord,
+            reset,setReset,
+            timer,setTimer,
+            drawingIndex,setDrawingIndex
         }}>
         {children}
     </GameContext.Provider>

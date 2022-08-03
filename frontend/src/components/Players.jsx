@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useState , useMemo } from "react";
 import { useGameContext } from "../hooks/useGameContext";
 import logo from '../assets/Boy.svg'
 import './Players.css'
+import { useEffect } from "react";
+
+
+
+
 function Players({socket}) {
 
     const {statePlayers,dispatch} = useGameContext();
-    socket.on('player-joined' , (score,name)=>{
-        dispatch({type: 'ADD_PLAYER', payload: {name,score}}) 
-    })
+    console.log(statePlayers);
+    
+    useEffect(()=>{
+        socket.on('player-joined', (score,name)=>{
+            dispatch({type: 'ADD_PLAYER', payload: {name,score}}) 
+        })
+    },[statePlayers]);
+   
+
     let i = 0;
     return ( 
         <div className="players-container">
